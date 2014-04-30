@@ -3,6 +3,7 @@ lucky 7 = "LUCKY NUMBER SEVEN!"
 lucky x = "Sorry, you're out of luck, pal!"
 
 
+-- TODO: learn what this is called, definitely not "overloading"
 sayMe :: Int -> String 
 sayMe 1 = "One!"
 sayMe 2 = "Two!"
