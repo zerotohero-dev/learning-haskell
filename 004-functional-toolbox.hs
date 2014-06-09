@@ -1,3 +1,5 @@
+-- TODO: Fix this sh for the next session!
+
 map :: (a -> b) -> [a] -> [b]
 map _ [] = []
 map f (x:xs) = f x : map f xs
@@ -24,7 +26,7 @@ filterTest4 =
     in
         filter notNull [[1,2,3],[],[3,4,5],[2,2],[],[],[]]
 
-filterTest5 = filter (`elem` [' a'..' z']) "u LaUgH aT mE BeCaUsE I aM diFfeRent"
+filterTest5 = filter (`elem` ['a'..'z']) "u LaUgH aT mE BeCaUsE I aM diFfeRent"
 filterTest6 = filter (< 15) (filter even [1..20])
 
 quicksort :: (Ord a) => [a] -> [a]
@@ -38,5 +40,4 @@ quicksort (x:xs) =
 
 largestDivisible :: Integer
 largestDivisible =
-    head (filter p [100000,99999..])
-    where  p x = x `mod` 3829 == 0
+    head (filter p [100000,99999..]) where  p x = x `mod` 3829 == 0

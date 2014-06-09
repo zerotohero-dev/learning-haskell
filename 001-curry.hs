@@ -21,6 +21,8 @@ mulThreeSixFiveTen = mulThreeSixFive 10
 divideByTen :: Double -> Double
 divideByTen = (/10)
 
+invByTen = (10/)
+
 isUpperAlphaNum :: Char -> Bool
 isUpperAlphaNum = (`elem` ['A'..'Z'])
 

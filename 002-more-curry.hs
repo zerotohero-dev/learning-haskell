@@ -10,6 +10,8 @@ zipWith1 _ [] _ = []
 zipWith1 _ _ [] = []
 zipWith1 f (x:xs) (y:ys) = f x y : zipWith1 f xs ys
 
+-- x:s:x:[]
+
 
 zipTest :: Integer -> Integer -> Integer
 zipTest a b = a + b
