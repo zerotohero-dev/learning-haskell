@@ -1,4 +1,4 @@
-so = foldl (+) 0 (replicate 1000000 1)
+so = foldl (+) 0 (replicate 10000000 1)
 
 -- foldl (+) 0 [1,2,3] = 
 -- foldl (+) (0 + 1) [2,3] = 

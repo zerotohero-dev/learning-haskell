@@ -10,7 +10,6 @@ test4 = sqrt $ 3 + 4 + 9
 
 test5 = sum (filter (> 10) (map (*2) [2..10]))
 test6 = sum $ filter (> 10) (map (*2) [2..10])
--- f $ (g $ x) === f $ g $ x
 test7 = sum $ filter (> 10) $ map (*2) [2..10]
 
 test8 = map ($ 3) [(/4), (10*), (^2), sqrt]

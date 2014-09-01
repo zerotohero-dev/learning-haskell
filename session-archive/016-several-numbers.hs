@@ -1,3 +1,6 @@
+import qualified Data.Map as Map
+import Data.Char
+
 phoneBook = 
     [("betty", "555-2938"),
     ("betty", "342-2492") ,
@@ -19,10 +22,10 @@ findPatsy = Map.lookup "patsy" $ phoneBookToMap phoneBook
 
 
 phoneBookToMap2 :: (Ord k) => [(k, a)] -> Map.Map k [a] 
-phoneBookToMap xs = Map.fromListWith (++) $ map (\(k, v) -> (k, [v])) xs
+phoneBookToMap2 xs = Map.fromListWith (++) $ map (\(k, v) -> (k, [v])) xs
 
 findPatsy2 = Map.lookup "patsy" $ phoneBookToMap2 phoneBook
 
 findBiggest = Map.fromListWith max [(2,3),(2,5),(2,100),(3,29),(3,22),(3,11),(4,22),(4,15)]
 
-addTogether = Map.fromListWith (x) [(2,3),(2,5),(2,100),(3,29),(3,22),(3,11),(4,22),(4,15)]
+addTogether = Map.fromListWith (*) [(2,3),(2,5),(2,100),(3,29),(3,22),(3,11),(4,22),(4,15)]

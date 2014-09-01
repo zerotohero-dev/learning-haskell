@@ -1,3 +1,8 @@
+-- import System.Process
+--
+--clear :: IO ()
+--clear = system "clear"
+
 largestDivisible :: Integer
 largestDivisible =
     head (filter p [100000,99999..]) where  p x = x `mod` 3829 == 0
@@ -10,7 +15,6 @@ chain n
 
 numLongChains :: Int 
 numLongChains = length (filter (\xs -> length xs > 15) (map chain [1..100]))
-
 
 test1 = map (+3) [1,6,3,2]
 test2 = map (\x -> x + 3) [1,6,3,2]

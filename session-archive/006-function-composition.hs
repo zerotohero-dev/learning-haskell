@@ -1,3 +1,5 @@
+import Data.List
+
 -- (.) :: (b -> c) -> (a -> b) -> (a -> c) 
 -- f . g = \x -> f (g x)
 
@@ -9,12 +11,13 @@ makeNegative2 = map (negate . abs)
 
 map1 = map (\xs -> negate (sum (tail xs)))
 map2 = map (negate . sum . tail)
+map3 = map $ negate .sum . tail
 
 expr1 = sum (replicate 5 (max 6.7 8.9))
-expr2 = (sum . replicate 5) max 6.7 8.9
+expr2 = (sum . replicate 5) (max 6.7 8.9)
 expr3 = sum . replicate 5 $ max 6.7 8.9
 
 expr4 = replicate 2 (product (map (*3) (zipWith max [1,2] [4,5])))
-expr5 = replicate 2 (procuct (map (*3) $ zipWIth max [1,2] [4,5]))
+expr5 = replicate 2 (product (map (*3) $ zipWith max [1,2] [4,5]))
 expr6 = replicate 2 (product . map (*3) $ zipWith max [1,2] [4,5]) 
 expr7 = replicate 2 . product . map (*3) $ zipWith max [1,2] [4,5]
