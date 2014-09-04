@@ -48,7 +48,6 @@ failureToZero (OK d) = d
 
 mappingTest = print (failureToZero Failure, failureToZero (OK 3.4))
 
-
 -- Store a person's name, age, and favorite Thing
 data Person = Person String Int Thing
   deriving Show
@@ -71,7 +70,7 @@ data AlgDataType = Constr1 Int Double
                  | Constr3 String Int Person
                  | Constr4
 
--- Pattenr aliases
+-- Pattern aliases
 baz :: Person -> String
 baz p@(Person n _ _) = "The name field of (" ++ show p ++ ") is " ++ n
 

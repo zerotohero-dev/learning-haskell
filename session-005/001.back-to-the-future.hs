@@ -99,8 +99,6 @@ foo n
 
 fooTest = print [foo (-3), foo 0, foo 1, foo 36, foo 38]
 
-
-
 isEven :: Integer -> Bool
 isEven n
     | n `mod` 2 == 0 = True
@@ -137,7 +135,7 @@ hailstoneSeqTest = print (hailstoneSeq 15)
 -- Compute the length of a list of Integers
 intListLength :: [Integer] -> Integer
 intListLength [] = 0
-intListLength (x:xs) = 1 + intListLength xs
+intListLength (_:xs) = 1 + intListLength xs
 
 intListLengthTest = print (intListLength [1,2,3,4,5])
 
