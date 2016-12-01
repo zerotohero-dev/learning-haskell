@@ -26,3 +26,7 @@ x +++ y = if even x then y else x + y
 -- take :: Int -> [a] -> [a]
 -- a is a type variable. — Type variables begin with a lowercase letter.
 -- Type variables can be instantiated to any type.
+
+-- (+) :: Num a = > a -> a -> a
+-- Type Classes:
+-- (+) is of type `a -> a -> a` for any a of type `Num`
