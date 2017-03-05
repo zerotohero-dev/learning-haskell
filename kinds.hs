@@ -1,0 +1,1 @@
+-- Types have their own “types” called “kinds”.
