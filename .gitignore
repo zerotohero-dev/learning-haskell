@@ -6,4 +6,5 @@ cabal-dev
 *.chs.h
 .virthualenv
 
-/.idea/
+.idea
+.c9
